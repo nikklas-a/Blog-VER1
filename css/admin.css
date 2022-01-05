@@ -1,0 +1,409 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+@font-face {
+    font-family: "Computer Modern";
+    src: url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunss.otf');
+  }
+  @font-face {
+    font-family: "Computer Modern";
+    src: url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunsx.otf');
+    font-weight: bold;
+  }
+  @font-face {
+    font-family: "Computer Modern";
+    src: url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunsi.otf');
+    font-style: italic, oblique;
+  }
+  @font-face {
+    font-family: "Computer Modern";
+    src: url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunbxo.otf');
+    font-weight: bold;
+    font-style: italic, oblique;
+  }
+
+a.dm {
+	color: hsla(223, 34%, 56%, 1);
+  font-family: inherent;
+	text-decoration: none;
+	text-transform: none;
+}
+a.dm:link {
+	font-family: inherent;
+}
+a.dm:visited {
+	font-family: inherent;
+}
+a.dm:hover {
+	font-family: inherent;
+}
+a.dm:active {
+	font-family: inherent;
+}
+
+a {
+  color: hsla(223, 34%, 56%, 1);
+  font-family: inherent;
+  text-decoration: none;
+  text-transform: none;
+ 
+}
+
+a:hover {
+  text-decoration: underline;
+
+}
+
+:root {
+  --bg-color-hsl: 59, 3%, 98%;
+  --bg-color: hsl(var(--bg-color-hsl));
+  --bg-color-translucent: hsla(var(--bg-color-hsl), 0.95);
+  --color-text: hsl(192, 14%, 20%);
+  --page-width: 100%;
+  --paragraph-font-size: min(max(1.2rem, 4vw), 1.4rem);
+  --header-font-size: min(max(2rem, 8vw), 4rem);
+  --space: 0rem;
+  --padding: 8vmin;
+  --duration: 1s;
+  --ease: cubic-bezier(0.25, 1, 0.5, 1);
+
+}
+
+body {
+  font-family: "Computer Modern", sans-serif;
+	font-weight: 400;
+	color: var(--color-text);
+	background-color: var(--bg-color);
+	transition: background-color calc(var(--duration) / 4) var(--ease);
+
+}
+
+body[data-light-mode="dark"] {
+  --bg-color-hsl: 0, 0%, 7%;
+  --bg-color: hsl(var(--bg-color-hsl));
+  --bg-color-translucent: hsla(var(--bg-color-hsl), 0.95);
+  --bg-color-highlight: hsl(238, 70%, 40%);
+  --color-text: hsl(0, 0%, 80%);
+  --color-text-highlight: hsl(0, 0%, 100%);
+
+}
+
+header {
+  font-family: "Computer Modern", serif;
+  display: flex-start;
+  justify-content: space-between;
+  position: fixed;
+  top: 0px;
+  left: 0;
+  right: 0;
+  margin: 0px auto;
+  padding: 0;
+  width: 100%;
+  max-width: var(--page-width);
+  background-color: var(--bg-color-translucent);
+  transition: background-color calc(var(--duration) / 4) var(--ease);
+
+}
+
+select {
+  font-family: inherit;
+  font-size: 16px;
+
+}
+
+input[type=button] {
+  transition-duration: 0.4s;
+  background-color: #121212;
+  width: 80px;
+  height: 30px;
+  color: #CCCCCC;
+  border: 2px solid #CCCCCC;
+  font-family: inherit;
+
+}
+
+input[type=submit] {
+  transition-duration: 0.4s;
+  background-color: #121212;
+  width: 80px;
+  height: 30px;
+  color: #CCCCCC;
+  border: 2px solid #CCCCCC;
+  font-family: inherit;
+
+}
+
+label {
+  font-size: 0.8rem;
+  position: relative;
+  top: -2px;
+
+}
+
+.container {
+  position: relative;
+  width: 100%;
+
+}
+
+* {
+  margin:0;
+  padding:0;
+
+}
+
+.headerdiv {
+  z-index: 0;
+  margin: 0em 10em 0 20em;
+  position: sticky; 
+  width: 60%;
+  height: 1000px;
+  padding-top: 1em;
+  font-family: "Computer Modern", serif;
+  max-width: var(--page-width);
+  background-color: var(--bg-color-translucent);
+  transition: background-color calc(var(--duration) / 4) var(--ease);
+  opacity: 1;
+}
+
+.header-logo {
+  position: relative;
+  width: 100%;
+  align-content: center;
+  display: flex; 
+  justify-content: flex-end; 
+  overflow: hidden;
+  
+}
+
+.logo {
+  width: 100%;
+
+}
+
+.header-sub {
+  z-index: 0;
+  position: relative;
+  width: 100%;
+  display: flex; 
+  justify-content: flex-end; 
+  padding: 10px;
+  
+
+}
+
+.header-nav {
+  z-index: 20;
+  position: relative;
+  width: 100%;
+  height: max-content;
+  display: flex; 
+  justify-content: flex-end; 
+  padding-top:5px;
+  margin-right: 0%;
+  opacity: 1;
+  
+
+}
+
+.maintext {
+  z-index: 0;
+  position: absolute;
+  width: 60%;
+  background-color: var(--bg-color-translucent);
+  transition: background-color calc(var(--duration) / 4) var(--ease);
+  /*margin: 10em 10em 0 20em;*/
+  margin-top: 10em;
+  margin-left: 20em;
+  margin-right: auto;
+  margin-bottom: 10em;
+  opacity: 1;
+  font-family: "Computer Modern", serif;
+   
+}
+
+.sidebar {
+  z-index: 0;
+  position: absolute;
+  margin: 13em 2em auto;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 10px;
+  padding-right: 40px;
+  background-color: var(--bg-color-translucent);
+  transition: background-color calc(var(--duration) / 4) var(--ease);
+  border: solid 1px #000000;
+  border-top: none;
+  border-bottom: none;
+  font-family: "Computer Modern", serif;
+  display: flex; 
+  justify-content: flex-end; 
+  overflow: hidden;
+      
+  }
+
+.footer {
+    clear: both;			
+    display: flex; 
+    justify-content: flex-end; 
+    padding: 5px;
+
+  }
+
+.menu {
+  
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px;
+
+
+}
+
+
+h1 {
+  font-family: "Playfair Display", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-top: 0rem;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-family: "Computer Modern", serif;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-family: "Computer Modern", serif;
+  font-size: 24px;
+  font-weight: 100;
+  line-height: 1.2;
+  margin-top: 2rem;
+  margin-bottom: 1rem; 
+}
+
+h4 {
+  font-family: "Computer Modern", serif;
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 1.2;
+}
+
+.postdate {
+  font-family: "Computer Modern", serif;
+  font-size: 12px;
+  font-weight: 100;
+  line-height: 1.2;
+}
+
+p {
+  font-family: "Computer Modern", serif;
+  margin: 1rem 0;
+  font-size: 12pt;
+  line-height: 1.7;
+  letter-spacing: normal;
+  text-align: left;
+}
+
+t {
+  font-family: "Computer Modern", serif;
+  margin: 2rem 0;
+  font-size: 14pt;
+  line-height: 1.5;
+  letter-spacing: normal;
+}
+
+#container {
+	margin: 0 auto;
+  width: 70%;
+}
+
+textarea
+{
+  width:100%;
+}
+
+.textwrapper
+{
+  border:1px solid #CCCCCC;
+  margin:5px 0;
+  padding:3px;
+}
+
+nav {
+	margin: 0px 0;
+
+}
+
+nav ul {
+	padding: 5px;
+	margin: 0;
+	list-style: none;
+	position: relative;
+}
+	
+nav ul li {
+	display:inline-block;
+	}
+
+nav a {
+	display:block;
+	background-color: #FBEADC; 
+	padding:0 5px;	
+	font-size:25px;
+	line-height: 45px;
+	text-decoration:none;
+  padding: 5px;
+  text-decoration: none;
+  letter-spacing: 0.08em;
+}
+
+nav a:hover { 
+	background-color: #FAE6E1; 
+}
+
+nav ul ul {
+  width:100px;
+	display: none;
+	position: absolute; 
+	top: 60px;
+}
+
+nav ul li:hover > ul {
+	display:inherit;
+}
+
+nav ul ul li {
+	width:120%;
+	float:left;
+	display:list-item;
+	position: relative;
+	top: -2px;
+  opacity:1;
+  
+}
+
+nav ul ul ul li {
+	position: relative;
+	display:list-item;
+	float:none;
+	top:-60px; 
+	left:120px;
+}
+
+nav ul ul ul ul li {
+	position: relative;
+	display:list-item;
+	float:none;
+	top:-60px; 
+	left:100px;
+}
+
+li > a:after { content:  ' + '; }
+li > a:only-child:after { content: ''; }
